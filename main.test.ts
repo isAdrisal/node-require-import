@@ -62,7 +62,7 @@ Deno.test("deno: --preload with esm", async () => {
 
 Deno.test("deno: --require with cjs", async () => {
   const command = new Deno.Command("deno", {
-    args: ["--require", "./cjs.js", "main.ts"],
+    args: ["--unstable-detect-cjs", "--require", "./cjs.js", "main.ts"],
     stdout: "inherit",
     stderr: "inherit",
   });
